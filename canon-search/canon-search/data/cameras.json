@@ -1,0 +1,1137 @@
+{
+  "meta": {
+    "generatedOn": "2026-10-20",
+    "note": "Records with source 'knowledge-unverified' must be checked against usa.canon.com before publishing. Firmware variants (Stop Motion, Cropping Guide) are folded into their base body."
+  },
+  "cameras": [
+    {
+      "id": "eos-r1",
+      "name": "EOS R1",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 40,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "6K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "pro",
+      "coolingFan": false,
+      "weightG": 1115,
+      "dimensionsMm": [
+        157.6,
+        149.5,
+        87.3
+      ],
+      "cardSlots": "2x CFexpress B",
+      "priceUSD": 6799,
+      "regularPriceUSD": null,
+      "level": "pro",
+      "useTags": [
+        "sports",
+        "wildlife",
+        "events",
+        "news"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r1",
+      "imageUrl": null,
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r3",
+      "name": "EOS R3",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 24.1,
+      "burstFpsElectronic": 30,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "6K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "pro",
+      "coolingFan": false,
+      "weightG": 1015,
+      "dimensionsMm": [
+        150,
+        142.6,
+        87.2
+      ],
+      "cardSlots": "CFexpress B + SD",
+      "priceUSD": 4399,
+      "regularPriceUSD": 5399,
+      "level": "pro",
+      "useTags": [
+        "sports",
+        "wildlife",
+        "events"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r3",
+      "imageUrl": null,
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r5-mark-ii",
+      "name": "EOS R5 Mark II",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 45,
+      "burstFpsElectronic": 30,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "8K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": false,
+      "weightG": 746,
+      "dimensionsMm": [
+        138.5,
+        101.5,
+        93.5
+      ],
+      "cardSlots": "CFexpress B + SD",
+      "priceUSD": 4099,
+      "regularPriceUSD": 4399,
+      "level": "advanced",
+      "useTags": [
+        "landscape",
+        "wildlife",
+        "portrait",
+        "video",
+        "weddings"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r5-mark-ii",
+      "imageUrl": null,
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r5",
+      "name": "EOS R5",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 45,
+      "burstFpsElectronic": 20,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "8K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": false,
+      "weightG": 738,
+      "dimensionsMm": [
+        138.5,
+        97.5,
+        88
+      ],
+      "cardSlots": "CFexpress B + SD",
+      "priceUSD": 2999,
+      "regularPriceUSD": 3299,
+      "level": "advanced",
+      "useTags": [
+        "landscape",
+        "portrait",
+        "weddings",
+        "wildlife"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r5",
+      "imageUrl": null,
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r5-c",
+      "name": "EOS R5 C",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 45,
+      "burstFpsElectronic": 20,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "8K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": true,
+      "weightG": 770,
+      "dimensionsMm": [
+        142,
+        101,
+        111
+      ],
+      "cardSlots": "CFexpress B + SD",
+      "priceUSD": 3199,
+      "regularPriceUSD": 3899,
+      "level": "advanced",
+      "useTags": [
+        "video",
+        "filmmaking"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r5-c",
+      "imageUrl": null,
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r6-mark-iii",
+      "name": "EOS R6 Mark III",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 32.5,
+      "burstFpsElectronic": 40,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "7K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": true,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": false,
+      "weightG": 699,
+      "dimensionsMm": null,
+      "cardSlots": "CFexpress B + SD",
+      "priceUSD": 2799,
+      "regularPriceUSD": null,
+      "level": "advanced",
+      "useTags": [
+        "hybrid",
+        "weddings",
+        "events",
+        "wildlife",
+        "video"
+      ],
+      "source": "press/2026",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r6-mark-iii",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS R6 Mark III Body with Stop Motion Animation Firmware",
+          "priceUSD": 2899,
+          "regularPriceUSD": null,
+          "url": "https://www.usa.canon.com/shop/p/eos-r6-mark-iii-body-with-stop-motion-animation-firmware",
+          "stock": "backorder"
+        }
+      ],
+      "stock": "backorder",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r6-v",
+      "name": "EOS R6 V",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 32.5,
+      "burstFpsElectronic": 40,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "7K",
+        "max4kFps": 120,
+        "rawInternal": true,
+        "openGate": true,
+        "log": true
+      },
+      "ibis": true,
+      "evf": false,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": true,
+      "weightG": 598,
+      "dimensionsMm": null,
+      "cardSlots": "CFexpress B + SD",
+      "priceUSD": 2499,
+      "regularPriceUSD": null,
+      "level": "intermediate",
+      "useTags": [
+        "video",
+        "vlogging",
+        "filmmaking"
+      ],
+      "source": "press/2026",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r6-v",
+      "imageUrl": null,
+      "notes": "Video-first body: no EVF, active cooling fan. Reports conflict on the mechanical shutter; treated as electronic-only. Weight is from a pre-launch leak.",
+      "variants": [
+        {
+          "name": "EOS R6 V Body with Stop Motion Animation Firmware",
+          "priceUSD": 2599,
+          "regularPriceUSD": null,
+          "url": "https://www.usa.canon.com/shop/p/eos-r6-v-body-with-stop-motion-animation-firmware",
+          "stock": "backorder"
+        }
+      ],
+      "stock": "backorder",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r6-mark-ii",
+      "name": "EOS R6 Mark II",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 40,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": false,
+      "weightG": 670,
+      "dimensionsMm": [
+        138.4,
+        98.4,
+        88.4
+      ],
+      "cardSlots": "2x SD",
+      "priceUSD": 1999,
+      "regularPriceUSD": 2299,
+      "level": "intermediate",
+      "useTags": [
+        "hybrid",
+        "events",
+        "weddings",
+        "low_light"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r6-mark-ii",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS R6 Mark II Body with Stop Motion Animation Firmware",
+          "priceUSD": 2099,
+          "regularPriceUSD": 2399,
+          "url": "https://www.usa.canon.com/shop/p/eos-r6-mark-ii-body-with-stop-motion-animation-firmware",
+          "stock": "out"
+        },
+        {
+          "name": "EOS R6 Mark II with Cropping Guide Firmware",
+          "priceUSD": 2119,
+          "regularPriceUSD": 2419,
+          "url": "https://www.usa.canon.com/shop/p/eos-r6-mark-ii-with-cropping-guide-firmware",
+          "stock": "in"
+        }
+      ],
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r8-mark-ii",
+      "name": "EOS R8 Mark II",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 40,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "basic",
+      "coolingFan": false,
+      "weightG": 546,
+      "dimensionsMm": [
+        131.4,
+        90.0,
+        79.7
+      ],
+      "cardSlots": "1x SD (UHS-II)",
+      "priceUSD": 1899,
+      "regularPriceUSD": null,
+      "level": "intermediate",
+      "useTags": [
+        "travel",
+        "hybrid",
+        "street",
+        "portrait"
+      ],
+      "source": "press/2026",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r8-mark-ii-camera-body",
+      "imageUrl": null,
+      "notes": "Announced Sep 2026; IBIS rated 7.5 stops; adds AF joystick.",
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r8",
+      "name": "EOS R8",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 40,
+      "burstFpsMechanical": 6,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "basic",
+      "coolingFan": false,
+      "weightG": 461,
+      "dimensionsMm": [
+        132.5,
+        86.1,
+        70.0
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 1399,
+      "regularPriceUSD": 1649,
+      "level": "intermediate",
+      "useTags": [
+        "travel",
+        "street",
+        "portrait",
+        "beginner_full_frame"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r8",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS R8 with Cropping Guide Firmware",
+          "priceUSD": 1519,
+          "regularPriceUSD": 1769,
+          "url": "https://www.usa.canon.com/shop/p/eos-r8-with-cropping-guide-firmware",
+          "stock": "in"
+        }
+      ],
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-rp",
+      "name": "EOS RP",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "full_frame",
+      "megapixels": 26.2,
+      "burstFpsElectronic": 5,
+      "burstFpsMechanical": 5,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 24,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "basic",
+      "coolingFan": false,
+      "weightG": 485,
+      "dimensionsMm": [
+        132.5,
+        85,
+        70
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 899,
+      "regularPriceUSD": 1149,
+      "level": "beginner",
+      "useTags": [
+        "beginner_full_frame",
+        "travel"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-rp",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS RP Body with Stop Motion Animation Firmware",
+          "priceUSD": 1249,
+          "regularPriceUSD": null,
+          "url": "https://www.usa.canon.com/shop/p/eos-rp-body-with-stop-motion-animation-firmware",
+          "stock": "out"
+        }
+      ],
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r7",
+      "name": "EOS R7",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "aps_c",
+      "megapixels": 32.5,
+      "burstFpsElectronic": 30,
+      "burstFpsMechanical": 15,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": true,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "advanced",
+      "coolingFan": false,
+      "weightG": 612,
+      "dimensionsMm": [
+        132,
+        90.4,
+        91.7
+      ],
+      "cardSlots": "2x SD",
+      "priceUSD": 1649,
+      "regularPriceUSD": null,
+      "level": "advanced",
+      "useTags": [
+        "wildlife",
+        "birds",
+        "sports"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r7",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS R7 Body with Cropping Guide Firmware",
+          "priceUSD": 1769,
+          "regularPriceUSD": null,
+          "url": "https://www.usa.canon.com/shop/p/eos-r7-body-with-cropping-guide-firmware",
+          "stock": "out"
+        }
+      ],
+      "stock": "backorder",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r10",
+      "name": "EOS R10",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "aps_c",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 23,
+      "burstFpsMechanical": 15,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "basic",
+      "coolingFan": false,
+      "weightG": 429,
+      "dimensionsMm": [
+        122.5,
+        87.8,
+        83.4
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 1099,
+      "regularPriceUSD": null,
+      "level": "beginner",
+      "useTags": [
+        "beginner",
+        "sports",
+        "travel"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r10",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS R10 Body with Cropping Guide Firmware",
+          "priceUSD": 1219,
+          "regularPriceUSD": null,
+          "url": "https://www.usa.canon.com/shop/p/eos-r10-body-with-cropping-guide-firmware",
+          "stock": "out"
+        }
+      ],
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r50",
+      "name": "EOS R50",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "aps_c",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 15,
+      "burstFpsMechanical": 12,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 30,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 375,
+      "dimensionsMm": [
+        116.3,
+        85.5,
+        68.8
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 729.99,
+      "regularPriceUSD": 779.99,
+      "level": "beginner",
+      "useTags": [
+        "beginner",
+        "vlogging",
+        "travel"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r50",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS R50 Body with Cropping Guide Firmware",
+          "priceUSD": 849.99,
+          "regularPriceUSD": 899.99,
+          "url": "https://www.usa.canon.com/shop/p/eos-r50-body-with-cropping-guide-firmware",
+          "stock": "in"
+        }
+      ],
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r50-v",
+      "name": "EOS R50 V",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "aps_c",
+      "megapixels": 24.2,
+      "burstFpsElectronic": 15,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": false,
+      "evf": false,
+      "variAngleScreen": true,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 370,
+      "dimensionsMm": null,
+      "cardSlots": "1x SD",
+      "priceUSD": 619.99,
+      "regularPriceUSD": 719.99,
+      "level": "beginner",
+      "useTags": [
+        "vlogging",
+        "content_creation"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-r50-v-body",
+      "imageUrl": null,
+      "notes": "No EVF; vertical tripod socket; 4K60 is cropped.",
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-r100",
+      "name": "EOS R100",
+      "category": "camera",
+      "type": "mirrorless",
+      "mount": "RF",
+      "sensor": "aps_c",
+      "megapixels": 24.1,
+      "burstFpsElectronic": 6.5,
+      "burstFpsMechanical": 6.5,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 24,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": false,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 356,
+      "dimensionsMm": [
+        116.3,
+        85.5,
+        68.8
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 479,
+      "regularPriceUSD": null,
+      "level": "beginner",
+      "useTags": [
+        "beginner"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "knowledge-unverified",
+      "productUrl": null,
+      "imageUrl": null,
+      "notes": "Not in the body-only listing (kit-only); price is an approximate kit price.",
+      "verifiedOnSite": false
+    },
+    {
+      "id": "eos-5d-mark-iv",
+      "name": "EOS 5D Mark IV",
+      "category": "camera",
+      "type": "dslr",
+      "mount": "EF",
+      "sensor": "full_frame",
+      "megapixels": 30.4,
+      "burstFpsElectronic": 7,
+      "burstFpsMechanical": 7,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 30,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": false,
+      "weatherSealing": "advanced",
+      "coolingFan": false,
+      "weightG": 890,
+      "dimensionsMm": [
+        150.7,
+        116.4,
+        75.9
+      ],
+      "cardSlots": "CF + SD",
+      "priceUSD": 1999,
+      "regularPriceUSD": 2499,
+      "level": "advanced",
+      "useTags": [
+        "landscape",
+        "weddings",
+        "portrait"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": "https://www.usa.canon.com/shop/p/eos-5d-mark-iv",
+      "imageUrl": null,
+      "variants": [
+        {
+          "name": "EOS 5D Mark IV with Canon Log",
+          "priceUSD": 2599,
+          "url": "https://www.usa.canon.com/shop/p/eos-5d-mark-iv-with-canon-log"
+        }
+      ],
+      "stock": "in",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "eos-rebel-t7",
+      "name": "EOS Rebel T7",
+      "category": "camera",
+      "type": "dslr",
+      "mount": "EF",
+      "sensor": "aps_c",
+      "megapixels": 24.1,
+      "burstFpsElectronic": 3,
+      "burstFpsMechanical": 3,
+      "video": {
+        "maxResolution": "1080p",
+        "max4kFps": null,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": false,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 475,
+      "dimensionsMm": [
+        129,
+        101.3,
+        77.6
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 499.99,
+      "regularPriceUSD": 579.99,
+      "level": "beginner",
+      "useTags": [
+        "beginner"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "usa.canon.com/2026-10-20",
+      "productUrl": null,
+      "imageUrl": null,
+      "kitOnly": true,
+      "notes": "Sold only as kits on usa.canon.com; price is the EF-S 18-55 IS II kit.",
+      "verifiedOnSite": true
+    },
+    {
+      "id": "powershot-v1",
+      "name": "PowerShot V1",
+      "category": "camera",
+      "type": "compact",
+      "mount": "fixed",
+      "sensor": "1_4_inch",
+      "megapixels": 22.3,
+      "burstFpsElectronic": 30,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 60,
+        "rawInternal": false,
+        "openGate": false,
+        "log": true
+      },
+      "ibis": false,
+      "evf": false,
+      "variAngleScreen": true,
+      "weatherSealing": "none",
+      "coolingFan": true,
+      "weightG": 426,
+      "dimensionsMm": null,
+      "cardSlots": "1x SD",
+      "priceUSD": 899,
+      "regularPriceUSD": null,
+      "level": "intermediate",
+      "useTags": [
+        "vlogging",
+        "travel",
+        "content_creation"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "knowledge-unverified",
+      "productUrl": null,
+      "imageUrl": null,
+      "fixedLens": {
+        "focalEquivMm": [
+          16,
+          50
+        ],
+        "aperture": [
+          2.8,
+          4.5
+        ]
+      },
+      "verifiedOnSite": false
+    },
+    {
+      "id": "powershot-g7x-mark-iii",
+      "name": "PowerShot G7 X Mark III",
+      "category": "camera",
+      "type": "compact",
+      "mount": "fixed",
+      "sensor": "1_inch",
+      "megapixels": 20.1,
+      "burstFpsElectronic": 30,
+      "burstFpsMechanical": 8.3,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 30,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": false,
+      "variAngleScreen": true,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 304,
+      "dimensionsMm": [
+        105.5,
+        60.9,
+        41.4
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 749,
+      "regularPriceUSD": null,
+      "level": "beginner",
+      "useTags": [
+        "vlogging",
+        "travel",
+        "everyday"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "knowledge-unverified",
+      "productUrl": null,
+      "imageUrl": null,
+      "fixedLens": {
+        "focalEquivMm": [
+          24,
+          100
+        ],
+        "aperture": [
+          1.8,
+          2.8
+        ]
+      },
+      "verifiedOnSite": false
+    },
+    {
+      "id": "powershot-v10",
+      "name": "PowerShot V10",
+      "category": "camera",
+      "type": "compact",
+      "mount": "fixed",
+      "sensor": "1_inch",
+      "megapixels": 20.1,
+      "burstFpsElectronic": null,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 30,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": false,
+      "variAngleScreen": false,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 211,
+      "dimensionsMm": null,
+      "cardSlots": "1x SD",
+      "priceUSD": 429,
+      "regularPriceUSD": null,
+      "level": "beginner",
+      "useTags": [
+        "vlogging",
+        "content_creation"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "knowledge-unverified",
+      "productUrl": null,
+      "imageUrl": null,
+      "fixedLens": {
+        "focalEquivMm": [
+          19,
+          19
+        ],
+        "aperture": [
+          2.8,
+          2.8
+        ]
+      },
+      "verifiedOnSite": false
+    },
+    {
+      "id": "powershot-sx740-hs",
+      "name": "PowerShot SX740 HS",
+      "category": "camera",
+      "type": "compact",
+      "mount": "fixed",
+      "sensor": "1_2_3_inch",
+      "megapixels": 20.3,
+      "burstFpsElectronic": 10,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 30,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": false,
+      "variAngleScreen": false,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 299,
+      "dimensionsMm": [
+        110.1,
+        63.8,
+        39.9
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 399,
+      "regularPriceUSD": null,
+      "level": "beginner",
+      "useTags": [
+        "travel",
+        "everyday",
+        "zoom"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "knowledge-unverified",
+      "productUrl": null,
+      "imageUrl": null,
+      "fixedLens": {
+        "focalEquivMm": [
+          24,
+          960
+        ],
+        "aperture": [
+          3.3,
+          6.9
+        ]
+      },
+      "verifiedOnSite": false
+    },
+    {
+      "id": "powershot-sx70-hs",
+      "name": "PowerShot SX70 HS",
+      "category": "camera",
+      "type": "compact",
+      "mount": "fixed",
+      "sensor": "1_2_3_inch",
+      "megapixels": 20.3,
+      "burstFpsElectronic": 10,
+      "burstFpsMechanical": null,
+      "video": {
+        "maxResolution": "4K",
+        "max4kFps": 30,
+        "rawInternal": false,
+        "openGate": false,
+        "log": false
+      },
+      "ibis": false,
+      "evf": true,
+      "variAngleScreen": true,
+      "weatherSealing": "none",
+      "coolingFan": false,
+      "weightG": 608,
+      "dimensionsMm": [
+        127.1,
+        90.9,
+        116.6
+      ],
+      "cardSlots": "1x SD",
+      "priceUSD": 549,
+      "regularPriceUSD": null,
+      "level": "beginner",
+      "useTags": [
+        "wildlife",
+        "birds",
+        "zoom",
+        "travel"
+      ],
+      "source": "knowledge-unverified",
+      "priceSource": "knowledge-unverified",
+      "productUrl": null,
+      "imageUrl": null,
+      "fixedLens": {
+        "focalEquivMm": [
+          21,
+          1365
+        ],
+        "aperture": [
+          3.4,
+          6.5
+        ]
+      },
+      "verifiedOnSite": false
+    }
+  ]
+}

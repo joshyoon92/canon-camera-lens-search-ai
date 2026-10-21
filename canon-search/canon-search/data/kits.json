@@ -1,0 +1,114 @@
+{
+  "meta": {
+    "generatedOn": "2026-10-20",
+    "note": "Records with source 'knowledge-unverified' must be checked against usa.canon.com before publishing. Firmware variants (Stop Motion, Cropping Guide) are folded into their base body."
+  },
+  "kits": [
+    {
+      "id": "kit-eos-r8-mark-ii-rf24-50",
+      "name": "EOS R8 Mark II RF24-50mm F4.5-6.3 IS STM Lens Kit",
+      "bodyId": "eos-r8-mark-ii",
+      "lensIds": [
+        "rf-24-50-f4.5"
+      ],
+      "priceUSD": 2099,
+      "regularPriceUSD": null,
+      "url": "https://www.usa.canon.com/shop/p/eos-r8-mark-ii-rf24-50mm-f4-5-6-3-is-stm-lens-kit",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-r6-v-rf20-50-pz",
+      "name": "EOS R6 V RF20-50mm F4 L IS USM PZ Lens Kit",
+      "bodyId": "eos-r6-v",
+      "lensIds": [
+        "rf-20-50-f4-l-pz"
+      ],
+      "priceUSD": 3699,
+      "regularPriceUSD": null,
+      "url": "https://www.usa.canon.com/shop/p/eos-r6-v-rf20-50mm-f4-l-is-usm-pz-lens-kit",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-r50-v-creator",
+      "name": "EOS R50 V Video Creator Kit",
+      "bodyId": "eos-r50-v",
+      "lensIds": [
+        "rf-s-14-30-pz"
+      ],
+      "priceUSD": 1049,
+      "regularPriceUSD": 1199,
+      "url": "https://www.usa.canon.com/shop/p/eos-r50-v-video-creator-kit",
+      "notes": "Creator kit also includes accessories; lens assumed from launch kit, verify.",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-r6-mark-iii-rf24-105-stm",
+      "name": "EOS R6 Mark III RF24-105mm F4-7.1 IS STM Lens Kit",
+      "bodyId": "eos-r6-mark-iii",
+      "lensIds": [
+        "rf-24-105-f4-7.1"
+      ],
+      "priceUSD": 3149,
+      "regularPriceUSD": null,
+      "url": "https://www.usa.canon.com/shop/p/eos-r6-mark-iii-rf24-105mm-f4-7-1-is-stm-lens-kit",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-r6-mark-iii-rf24-105-l",
+      "name": "EOS R6 Mark III RF24-105mm F4 L IS USM Lens Kit",
+      "bodyId": "eos-r6-mark-iii",
+      "lensIds": [
+        "rf-24-105-f4-l"
+      ],
+      "priceUSD": 4049,
+      "regularPriceUSD": null,
+      "url": "https://www.usa.canon.com/shop/p/eos-r6-mark-iii-rf24-105mm-f4-l-is-usm-lens-kit",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-5d-mark-iv-ef24-105-l",
+      "name": "EOS 5D Mark IV EF 24-105mm f/4L IS II USM Lens Kit",
+      "bodyId": "eos-5d-mark-iv",
+      "lensIds": [
+        "ef-24-105-f4-l-ii"
+      ],
+      "priceUSD": 3199,
+      "regularPriceUSD": 3699,
+      "url": "https://www.usa.canon.com/shop/p/eos-5d-mark-iv-ef-24-105mm-f-4l-is-ii-usm-lens-kit",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-rebel-t7-18-55",
+      "name": "EOS Rebel T7 EF-S 18-55mm IS II Kit",
+      "bodyId": "eos-rebel-t7",
+      "lensIds": [
+        "ef-s-18-55-is-ii"
+      ],
+      "priceUSD": 499.99,
+      "regularPriceUSD": 579.99,
+      "url": "https://www.usa.canon.com/shop/p/eos-rebel-t7-ef-s-18-55mm-f-3-5-5-6-is-ii",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    },
+    {
+      "id": "kit-eos-rebel-t7-double-zoom",
+      "name": "EOS Rebel T7 Double Zoom Lens Kit",
+      "bodyId": "eos-rebel-t7",
+      "lensIds": [
+        "ef-s-18-55-is-ii",
+        "ef-75-300-iii"
+      ],
+      "priceUSD": 619.99,
+      "regularPriceUSD": 699.99,
+      "url": "https://www.usa.canon.com/shop/p/eos-rebel-t7-double-zoom-lens-kit",
+      "category": "kit",
+      "source": "usa.canon.com/2026-10-20"
+    }
+  ]
+}

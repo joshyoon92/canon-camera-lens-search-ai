@@ -1,0 +1,33 @@
+{
+  "name": "canon-ai-search-concept",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc -b",
+    "build:catalog": "python3 scripts/build_catalog.py",
+    "build:compat": "node --experimental-strip-types --no-warnings scripts/build_compatibility.ts",
+    "eval": "node --experimental-strip-types --no-warnings eval/run-eval.ts",
+    "eval:verbose": "node --experimental-strip-types --no-warnings eval/run-eval.ts --verbose",
+    "scrape": "python3 scripts/scrape_listing.py",
+    "reconcile": "python3 scripts/reconcile.py",
+    "refresh": "python3 scripts/scrape_listing.py && python3 scripts/reconcile.py && python3 scripts/build_catalog.py && npm run -s build:compat && npm run -s eval"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  }
+}

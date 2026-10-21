@@ -1,0 +1,511 @@
+{
+ "source": "usa.canon.com lens listings, 2026-10-20: mirrorless 5/5 pages and DSLR 3/3 pages (complete)",
+ "items": [
+  {
+   "name": "RF20-50mm F4 L IS USM PZ Lens",
+   "url": "rf20-50mm-f4-l-is-usm-pz-lens",
+   "price": 1399,
+   "reg": null
+  },
+  {
+   "name": "RF14mm F1.4 L VCM",
+   "url": "rf14mm-f1-4-l-vcm",
+   "price": 2599,
+   "reg": null,
+   "new": true
+  },
+  {
+   "name": "RF7-14mm F2.8-3.5 L Fisheye STM",
+   "url": "rf7-14mm-f2-8-3-5-l-fisheye-stm",
+   "price": 1899,
+   "reg": null,
+   "new": true
+  },
+  {
+   "name": "RF45mm F1.2 STM",
+   "url": "rf45mm-f1-2-stm",
+   "price": 429.99,
+   "reg": 469.99
+  },
+  {
+   "name": "RF85mm F1.4 L VCM",
+   "url": "rf85mm-f1-4-l-vcm",
+   "price": 1649,
+   "reg": null
+  },
+  {
+   "name": "RF-S10-18mm F4.5-6.3 IS STM",
+   "url": "rf-s10-18mm-f4-5-6-3-is-stm",
+   "price": 319.99,
+   "reg": 369.99
+  },
+  {
+   "name": "RF10-20mm F4 L IS STM",
+   "url": "rf10-20mm-f4-l-is-stm",
+   "price": 2399,
+   "reg": 2599
+  },
+  {
+   "name": "RF14-35mm F4 L IS USM",
+   "url": "rf14-35mm-f4-l-is-usm",
+   "price": 1399,
+   "reg": 1499
+  },
+  {
+   "name": "RF-S14-30mm F4-6.3 IS STM PZ",
+   "url": "rf-s14-30mm-f4-6-3-is-stm-pz",
+   "price": 349.99,
+   "reg": 369.99
+  },
+  {
+   "name": "RF15-35mm F2.8 L IS USM",
+   "url": "rf15-35mm-f2-8-l-is-usm",
+   "price": 2399,
+   "reg": 2599
+  },
+  {
+   "name": "RF15-30mm F4.5-6.3 IS STM",
+   "url": "rf15-30mm-f4-5-6-3-is-stm",
+   "price": 539.99,
+   "reg": 639.99
+  },
+  {
+   "name": "RF16mm F2.8 STM",
+   "url": "rf16mm-f2-8-stm",
+   "price": 299.99,
+   "reg": 349.99
+  },
+  {
+   "name": "RF16-28mm F2.8 IS STM Lens",
+   "url": "rf16-28mm-f2-8-is-stm-lens",
+   "price": 999,
+   "reg": 1249
+  },
+  {
+   "name": "RF-S18-45mm F4.5-6.3 IS STM",
+   "url": "rf-s18-45mm-f4-5-6-3-is-stm",
+   "price": 349.99,
+   "reg": null
+  },
+  {
+   "name": "RF-S18-150mm F3.5-6.3 IS STM",
+   "url": "rf-s18-150mm-f3-5-6-3-is-stm",
+   "price": 569.99,
+   "reg": null
+  },
+  {
+   "name": "RF20mm F1.4 L VCM",
+   "url": "rf20mm-f-1-4-l-vcm",
+   "price": 1799,
+   "reg": 1899,
+   "stock": "out"
+  },
+  {
+   "name": "RF24mm F1.4 L VCM",
+   "url": "rf24mm-f1-4-l-vcm",
+   "price": 1499,
+   "reg": 1649
+  },
+  {
+   "name": "RF24mm F1.8 MACRO IS STM",
+   "url": "rf24mm-f1-8-macro-is-stm",
+   "price": 639.99,
+   "reg": 689.99
+  },
+  {
+   "name": "RF24-50mm F4.5-6.3 IS STM",
+   "url": "rf24-50mm-f4-5-6-3-is-stm",
+   "price": 349.99,
+   "reg": null
+  },
+  {
+   "name": "RF24-70mm F2.8 L IS USM",
+   "url": "rf24-70mm-f2-8l-is-usm",
+   "price": 2399,
+   "reg": 2599
+  },
+  {
+   "name": "RF24-105mm F2.8 L IS USM Z",
+   "url": "rf24-105mm-f2-8-l-is-usm-z",
+   "price": 3199,
+   "reg": 3299
+  },
+  {
+   "name": "RF24-105mm F4-7.1 IS STM",
+   "url": "rf24-105mm-f4-7-1-is-stm",
+   "price": 459.99,
+   "reg": null
+  },
+  {
+   "name": "RF24-105mm F4 L IS USM",
+   "url": "rf24-105mm-f4-l-is-usm",
+   "price": 1399,
+   "reg": null
+  },
+  {
+   "name": "RF24-240mm F4-6.3 IS USM",
+   "url": "rf24-240mm-f4-6-3-is-usm",
+   "price": 949,
+   "reg": 1049
+  },
+  {
+   "name": "RF28mm F2.8 STM",
+   "url": "rf28mm-f2-8-stm",
+   "price": 299.99,
+   "reg": 349.99
+  },
+  {
+   "name": "RF28-70mm F2.8 IS STM",
+   "url": "rf28-70mm-f2-8-is-stm",
+   "price": 1049,
+   "reg": 1249
+  },
+  {
+   "name": "RF28-70mm F2 L USM",
+   "url": "rf28-70mm-f2-l-usm",
+   "price": 3199,
+   "reg": 3399
+  },
+  {
+   "name": "RF35mm F1.4 L VCM",
+   "url": "rf35mm-f1-4-l-vcm",
+   "price": 1549,
+   "reg": 1649
+  },
+  {
+   "name": "RF35mm F1.8 Macro IS STM",
+   "url": "rf35mm-f1-8-macro-is-stm",
+   "price": 539.99,
+   "reg": 589.99
+  },
+  {
+   "name": "RF50mm F1.2 L USM",
+   "url": "rf50mm-f1-2-l-usm",
+   "price": 2499,
+   "reg": 2599
+  },
+  {
+   "name": "RF50mm F1.4 L VCM",
+   "url": "rf50mm-f1-4-l-vcm",
+   "price": 1449,
+   "reg": 1549
+  },
+  {
+   "name": "RF50mm F1.8 STM",
+   "url": "rf50mm-f1-8-stm",
+   "price": 199.99,
+   "reg": 239.99
+  },
+  {
+   "name": "RF-S55-210mm F5-7.1 IS STM",
+   "url": "rf-s55-210mm-f5-7-1-is-stm",
+   "price": 379.99,
+   "reg": 409.99
+  },
+  {
+   "name": "RF70-200mm F4 L IS USM",
+   "url": "rf70-200mm-f4-l-is-usm",
+   "price": 1599,
+   "reg": 1699
+  },
+  {
+   "name": "RF70-200mm F2.8 L IS USM",
+   "url": "rf70-200mm-f2-8-l-is-usm",
+   "price": 2799,
+   "reg": 2999
+  },
+  {
+   "name": "RF70-200mm F2.8 L IS USM Z (White)",
+   "url": "rf70-200mm-f2-8-l-is-usm-z",
+   "price": 3099,
+   "reg": 3299
+  },
+  {
+   "name": "EF 50mm f/1.2L USM",
+   "url": "ef-50mm-f-1-2l-usm",
+   "price": 1349,
+   "reg": 1549
+  },
+  {
+   "name": "EF 50mm f/1.8 STM",
+   "url": "ef-50mm-f-1-8-stm",
+   "price": 169.99,
+   "reg": null
+  },
+  {
+   "name": "EF-S 55-250mm f/4-5.6 IS STM",
+   "url": "ef-s-55-250mm-f-4-5-6-is-stm",
+   "price": 349.99,
+   "reg": null
+  },
+  {
+   "name": "EF 70-200mm f/2.8L IS III USM",
+   "url": "ef-70-200mm-f-2-8l-is-iii-usm",
+   "price": 2399,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "EF 70-200mm f/4L IS II USM",
+   "url": "ef-70-200mm-f-4l-is-ii-usm",
+   "price": 1649,
+   "reg": null
+  },
+  {
+   "name": "EF 70-300mm f/4-5.6 IS II USM",
+   "url": "ef-70-300mm-f-4-5-6-is-ii-usm",
+   "price": 689.99,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "EF 75-300mm f/4-5.6 III",
+   "url": "ef-75-300mm-f-4-5-6-iii",
+   "price": 239.99,
+   "reg": null
+  },
+  {
+   "name": "EF 85mm f/1.4L IS USM",
+   "url": "ef-85mm-f-1-4l-is-usm",
+   "price": 1749,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "EF 600mm f/4L IS III USM",
+   "url": "ef-600mm-f-4l-is-iii-usm",
+   "price": 14449,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "EF 400mm f/2.8L IS III USM",
+   "url": "ef-400mm-f-2-8l-is-iii-usm",
+   "price": 13399,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "EF 35mm f/1.4L II USM",
+   "url": "ef-35mm-f-1-4l-ii-usm",
+   "price": 1699,
+   "reg": 2299
+  },
+  {
+   "name": "EF 24-70mm f/2.8L II USM",
+   "url": "ef-24-70mm-f-2-8l-ii-usm",
+   "price": 2199,
+   "reg": null
+  },
+  {
+   "name": "RF600mm F4 L IS USM",
+   "url": "rf600mm-f4-l-is-usm",
+   "price": 14499,
+   "reg": null
+  },
+  {
+   "name": "RF800mm F11 IS STM",
+   "url": "rf800mm-f11-is-stm",
+   "price": 999,
+   "reg": 1199
+  },
+  {
+   "name": "RF800mm F5.6 L IS USM Lens",
+   "url": "rf800mm-f5-6-l-is-usm-lens",
+   "price": 18799,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "RF1200mm F8 L IS USM Lens",
+   "url": "rf1200mm-f8-l-is-usm-lens",
+   "price": 22699,
+   "reg": null
+  },
+  {
+   "name": "RF-S3.9mm F3.5 STM DUAL FISHEYE",
+   "url": "rf-s3-9mm-f3-5-stm-dual-fisheye",
+   "price": 1099,
+   "reg": 1299
+  },
+  {
+   "name": "RF5.2mm F2.8 L Dual Fisheye",
+   "url": "rf5-2mm-f2-8-l-dual-fisheye",
+   "price": 1999,
+   "reg": 2299
+  },
+  {
+   "name": "RF-S7.8mm F4 STM DUAL",
+   "url": "rf-s7-8mm-f4-stm-dual",
+   "price": 409.99,
+   "reg": 509.99
+  },
+  {
+   "name": "RF75-300mm F4-5.6",
+   "url": "rf75-300mm-f4-5-6",
+   "price": 199.99,
+   "reg": 239.99
+  },
+  {
+   "name": "RF85mm F1.2 L USM",
+   "url": "rf85mm-f1-2-l-usm",
+   "price": 2999,
+   "reg": 3099
+  },
+  {
+   "name": "RF85mm F1.2 L USM DS",
+   "url": "rf85mm-f1-2-l-usm-ds",
+   "price": 3299,
+   "reg": 3399
+  },
+  {
+   "name": "RF85mm F2 Macro IS STM",
+   "url": "rf85mm-f2-macro-is-stm",
+   "price": 639.99,
+   "reg": 689.99
+  },
+  {
+   "name": "RF100mm F2.8 L Macro IS USM",
+   "url": "rf100mm-f2-8-l-macro-is-usm",
+   "price": 1349,
+   "reg": null
+  },
+  {
+   "name": "RF100-300mm F2.8 L IS USM",
+   "url": "rf100-300mm-f2-8-l-is-usm",
+   "price": 10599,
+   "reg": null
+  },
+  {
+   "name": "RF100-400mm F5.6-8 IS USM",
+   "url": "rf100-400mm-f5-6-8-is-usm",
+   "price": 749.99,
+   "reg": null
+  },
+  {
+   "name": "RF100-500mm F4.5-7.1 L IS USM",
+   "url": "rf100-500mm-f4-5-7-1-l-is-usm",
+   "price": 2899,
+   "reg": 3099
+  },
+  {
+   "name": "RF135mm F1.8 L IS USM",
+   "url": "rf135mm-f1-8-l-is-usm",
+   "price": 2099,
+   "reg": 2399
+  },
+  {
+   "name": "RF200-800mm F6.3-9 IS USM",
+   "url": "rf200-800mm-f6-3-9-is-usm",
+   "price": 2049,
+   "reg": 2249
+  },
+  {
+   "name": "RF400mm F2.8 L IS USM",
+   "url": "rf400mm-f2-8-l-is-usm",
+   "price": 13399,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "RF600mm F11 IS STM",
+   "url": "rf600mm-f11-is-stm",
+   "price": 729.99,
+   "reg": 929.99
+  },
+  {
+   "name": "EF 24-105mm f/4L IS II USM",
+   "url": "ef-24-105mm-f-4l-is-ii-usm",
+   "price": 1449,
+   "reg": null
+  },
+  {
+   "name": "EF 16-35mm f/4L IS USM",
+   "url": "ef-16-35mm-f-4l-is-usm",
+   "price": 1149,
+   "reg": 1449
+  },
+  {
+   "name": "EF 16-35mm f/2.8L III USM",
+   "url": "ef-16-35mm-f-2-8l-iii-usm",
+   "price": 2499,
+   "reg": null
+  },
+  {
+   "name": "EF 11-24mm f/4L USM",
+   "url": "ef-11-24mm-f-4l-usm",
+   "price": 1999,
+   "reg": 3299,
+   "stock": "out"
+  },
+  {
+   "name": "EF 100mm f/2.8L Macro IS USM",
+   "url": "ef-100mm-f-2-8l-macro-is-usm",
+   "price": 1449,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "EF 100-400mm f/4.5-5.6L IS II USM",
+   "url": "ef-100-400mm-f-4-5-5-6l-is-ii-usm",
+   "price": 2699,
+   "reg": null
+  },
+  {
+   "name": "EF-S 24mm f/2.8 STM",
+   "url": "ef-s-24mm-f-2-8-stm",
+   "price": 169.99,
+   "reg": null
+  },
+  {
+   "name": "EF-S 18-55mm f/3.5-5.6 IS II",
+   "url": "ef-s-18-55mm-f-3-5-5-6-is-ii",
+   "price": 239.99,
+   "reg": null
+  },
+  {
+   "name": "EF-S 10-18mm f/4.5-5.6 IS STM",
+   "url": "ef-s-10-18mm-f-4-5-5-6-is-stm",
+   "price": 349.99,
+   "reg": null
+  },
+  {
+   "name": "EF-S 10-22mm f/3.5-4.5 USM",
+   "url": "ef-s-10-22mm-f-3-5-4-5-usm",
+   "price": 279.99,
+   "reg": 729.99
+  },
+  {
+   "name": "TS-E 17mm f/4L",
+   "url": "ts-e-17mm-f-4l",
+   "price": 2599,
+   "reg": null,
+   "stock": "out"
+  },
+  {
+   "name": "TS-E 24mm f/3.5L II",
+   "url": "ts-e-24mm-f-3-5l-ii",
+   "price": 2399,
+   "reg": null
+  },
+  {
+   "name": "TS-E 90mm f/2.8L MACRO",
+   "url": "ts-e-90mm-f-2-8l-macro",
+   "price": 2599,
+   "reg": null
+  },
+  {
+   "name": "TS-E 50mm f/2.8L MACRO",
+   "url": "ts-e-50mm-f-2-8l-macro",
+   "price": 2599,
+   "reg": null
+  },
+  {
+   "name": "TS-E 135mm f/4L MACRO",
+   "url": "ts-e-135mm-f-4l-macro",
+   "price": 2199,
+   "reg": null,
+   "stock": "out"
+  }
+ ]
+}

@@ -1,0 +1,1214 @@
+{
+ "meta": {
+  "note": "Expected lists are hand-labeled by domain judgment BEFORE running the engine, in ideal order (rank 1 = most relevant). 'split' separates dev queries (ok to tune against) from test queries (report only).",
+  "parsedBy": "hand-labeled; this isolates ranking quality from LLM parsing quality",
+  "relabeled": "2026-10-20: removed EOS 90D and Rebel SL3 from expected lists after the live DSLR listing showed they are no longer sold.",
+  "relabeled2": "2026-10-20: q22 and q28 (dev) relabeled after the live lens listings added RF14mm F1.4 L VCM, EF85mm f/1.4L IS and EF50mm f/1.2L, which are better answers than the original labels. Test queries were not relabeled.",
+  "tuningChange3": "2026-10-20: indoor_sports now scores focal fit for court distance (70-200mm equiv.) instead of reusing the generic telephoto score, after the full lens catalog surfaced RF400mm f/2.8 as the #1 indoor basketball pick. Test split unaffected by this change.",
+  "catalogPrune": "2026-10-20: EF40mm f/2.8, EF85mm f/1.8, EF-S18-55mm IS STM and EF-S18-135mm removed from the catalog because Canon USA no longer lists them. Their IDs were dropped from expected lists (q24, q28, q30) with no replacements added.",
+  "expansion": "2026-10-20: set grown from 32 to 60 queries (26 test / 34 dev), every query has exactly 5 expected. q33-q60 labeled from the catalog and compatibility data before the engine was run on them. Short lists filled by judgment: q01, q02, q09, q24, q28, q30 (+1 each). Rewritten because fewer than 5 Canon products satisfied the original constraint: q10 (only 3 cameras have a fan), q11 (3 IBIS bodies under $2000; budget raised to $3000), q16 (4 sealed bodies under $1800; raised to $2000), q29 (only 2 VR lenses fit the R7; replaced with a landscape query), q32 (only 2 power-zoom lenses; now 'stabilized zoom for video'). Caveat: q28 and q29 are dev queries whose earlier versions were run through the engine before relabeling. Stale-price fixes (live prices moved past the query budget): q18 RF85 F2 Macro -> RF-S55-210, q19 RF200-800 -> EF70-300 IS II, q30 RF-S18-150 -> RF-S14-30 PZ."
+ },
+ "queries": [
+  {
+   "id": "q01",
+   "split": "dev",
+   "text": "best camera for wildlife photography under $2000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "wildlife"
+    ],
+    "budgetMax": 2000
+   },
+   "expected": [
+    "eos-r7",
+    "eos-r6-mark-ii",
+    "eos-r8-mark-ii",
+    "eos-r10",
+    "eos-r8"
+   ]
+  },
+  {
+   "id": "q02",
+   "split": "dev",
+   "text": "beginner camera for vlogging under $800",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "vlogging",
+     "beginner"
+    ],
+    "budgetMax": 800,
+    "level": "beginner"
+   },
+   "expected": [
+    "eos-r50-v",
+    "eos-r50",
+    "powershot-g7x-mark-iii",
+    "powershot-v10",
+    "powershot-sx740-hs"
+   ]
+  },
+  {
+   "id": "q03",
+   "split": "test",
+   "text": "professional sports camera",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "sports"
+    ],
+    "level": "pro"
+   },
+   "expected": [
+    "eos-r1",
+    "eos-r3",
+    "eos-r5-mark-ii",
+    "eos-r6-mark-iii",
+    "eos-r7"
+   ]
+  },
+  {
+   "id": "q04",
+   "split": "dev",
+   "text": "high resolution camera for landscape photography",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "landscape"
+    ]
+   },
+   "expected": [
+    "eos-r5-mark-ii",
+    "eos-r5",
+    "eos-5d-mark-iv",
+    "eos-r6-mark-iii",
+    "eos-r7"
+   ]
+  },
+  {
+   "id": "q05",
+   "split": "dev",
+   "text": "full frame camera for weddings under $2500",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "weddings"
+    ],
+    "budgetMax": 2500,
+    "sensor": "full_frame"
+   },
+   "expected": [
+    "eos-r6-mark-ii",
+    "eos-r8-mark-ii",
+    "eos-5d-mark-iv",
+    "eos-r8",
+    "eos-rp"
+   ]
+  },
+  {
+   "id": "q06",
+   "split": "test",
+   "text": "video camera with RAW and 4K 120fps",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "video"
+    ],
+    "mustHave": [
+     "raw_video",
+     "4k120"
+    ]
+   },
+   "expected": [
+    "eos-r6-v",
+    "eos-r5-c",
+    "eos-r6-mark-iii",
+    "eos-r5-mark-ii",
+    "eos-r5"
+   ]
+  },
+  {
+   "id": "q07",
+   "split": "dev",
+   "text": "lightweight travel camera",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "travel"
+    ]
+   },
+   "expected": [
+    "eos-r8-mark-ii",
+    "eos-r8",
+    "eos-r50",
+    "powershot-g7x-mark-iii",
+    "eos-rp"
+   ]
+  },
+  {
+   "id": "q08",
+   "split": "dev",
+   "text": "cheapest full frame camera",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "beginner"
+    ],
+    "sensor": "full_frame"
+   },
+   "expected": [
+    "eos-rp",
+    "eos-r8",
+    "eos-r8-mark-ii",
+    "eos-r6-mark-ii",
+    "eos-5d-mark-iv"
+   ]
+  },
+  {
+   "id": "q09",
+   "split": "test",
+   "text": "camera for bird photography on a budget under $1200",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "birds"
+    ],
+    "budgetMax": 1200
+   },
+   "expected": [
+    "eos-r10",
+    "powershot-sx70-hs",
+    "eos-r50",
+    "eos-r100",
+    "powershot-sx740-hs"
+   ]
+  },
+  {
+   "id": "q10",
+   "split": "dev",
+   "text": "camera for long video recording sessions without overheating",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "video",
+     "vlogging"
+    ]
+   },
+   "expected": [
+    "eos-r6-v",
+    "eos-r5-c",
+    "powershot-v1",
+    "eos-r6-mark-iii",
+    "eos-r5-mark-ii"
+   ]
+  },
+  {
+   "id": "q11",
+   "split": "dev",
+   "text": "camera with in-body stabilization under $3000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [],
+    "budgetMax": 3000,
+    "mustHave": [
+     "ibis"
+    ]
+   },
+   "expected": [
+    "eos-r6-mark-iii",
+    "eos-r6-mark-ii",
+    "eos-r5",
+    "eos-r8-mark-ii",
+    "eos-r7"
+   ]
+  },
+  {
+   "id": "q12",
+   "split": "test",
+   "text": "astrophotography camera",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "astro"
+    ]
+   },
+   "expected": [
+    "eos-r6-mark-ii",
+    "eos-r6-mark-iii",
+    "eos-r8-mark-ii",
+    "eos-r5-mark-ii",
+    "eos-r8"
+   ]
+  },
+  {
+   "id": "q13",
+   "split": "dev",
+   "text": "best first camera for a student",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "beginner"
+    ],
+    "level": "beginner"
+   },
+   "expected": [
+    "eos-r50",
+    "eos-r100",
+    "eos-r10",
+    "eos-rebel-t7",
+    "eos-r50-v"
+   ]
+  },
+  {
+   "id": "q14",
+   "split": "dev",
+   "text": "hybrid photo and video camera for a YouTuber",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "hybrid",
+     "vlogging"
+    ]
+   },
+   "expected": [
+    "eos-r6-mark-iii",
+    "eos-r6-v",
+    "eos-r8-mark-ii",
+    "eos-r6-mark-ii",
+    "eos-r5-mark-ii"
+   ]
+  },
+  {
+   "id": "q15",
+   "split": "test",
+   "text": "small camera for street photography",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "street"
+    ]
+   },
+   "expected": [
+    "eos-r8",
+    "eos-r8-mark-ii",
+    "powershot-g7x-mark-iii",
+    "eos-r50",
+    "eos-rp"
+   ]
+  },
+  {
+   "id": "q16",
+   "split": "dev",
+   "text": "weather sealed camera for hiking under $2000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "travel",
+     "landscape"
+    ],
+    "budgetMax": 2000,
+    "mustHave": [
+     "weather_sealed"
+    ]
+   },
+   "expected": [
+    "eos-r8-mark-ii",
+    "eos-r7",
+    "eos-r6-mark-ii",
+    "eos-r8",
+    "eos-rp"
+   ]
+  },
+  {
+   "id": "q17",
+   "split": "dev",
+   "text": "portrait lens for my R8",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "portrait"
+    ],
+    "ownedCameraId": "eos-r8"
+   },
+   "expected": [
+    "rf-85-f1.4-l-vcm",
+    "rf-85-f1.2-l",
+    "rf-85-f2-macro",
+    "rf-135-f1.8-l",
+    "rf-50-f1.2-l"
+   ]
+  },
+  {
+   "id": "q18",
+   "split": "test",
+   "text": "cheap portrait lens for R50 under $600",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "portrait"
+    ],
+    "ownedCameraId": "eos-r50",
+    "budgetMax": 600
+   },
+   "expected": [
+    "rf-50-f1.8",
+    "rf-45-f1.2",
+    "rf-s-55-210",
+    "rf-35-f1.8-macro",
+    "ef-50-f1.8"
+   ]
+  },
+  {
+   "id": "q19",
+   "split": "dev",
+   "text": "wildlife lens under $2000 for my R7",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "wildlife"
+    ],
+    "ownedCameraId": "eos-r7",
+    "budgetMax": 2000
+   },
+   "expected": [
+    "ef-70-300-is-ii",
+    "rf-100-400",
+    "rf-600-f11",
+    "rf-800-f11",
+    "rf-s-55-210"
+   ]
+  },
+  {
+   "id": "q20",
+   "split": "dev",
+   "text": "best lens for bird photography",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "birds"
+    ]
+   },
+   "expected": [
+    "rf-600-f4-l",
+    "rf-800-f5.6-l",
+    "rf-100-500-l",
+    "rf-200-800",
+    "rf-1200-f8-l"
+   ]
+  },
+  {
+   "id": "q21",
+   "split": "test",
+   "text": "wide angle lens for landscapes",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "landscape"
+    ]
+   },
+   "expected": [
+    "rf-10-20-f4-l",
+    "rf-14-35-f4-l",
+    "rf-15-35-f2.8-l",
+    "rf-16-28-f2.8",
+    "rf-15-30-f4.5"
+   ]
+  },
+  {
+   "id": "q22",
+   "split": "dev",
+   "text": "astrophotography lens for R6 Mark II",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "astro"
+    ],
+    "ownedCameraId": "eos-r6-mark-ii"
+   },
+   "expected": [
+    "rf-14-f1.4-l-vcm",
+    "rf-20-f1.4-l-vcm",
+    "rf-24-f1.4-l-vcm",
+    "rf-15-35-f2.8-l",
+    "rf-16-28-f2.8"
+   ]
+  },
+  {
+   "id": "q23",
+   "split": "dev",
+   "text": "macro lens for my R5",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "macro"
+    ],
+    "ownedCameraId": "eos-r5"
+   },
+   "expected": [
+    "rf-100-f2.8-l-macro",
+    "rf-85-f2-macro",
+    "rf-35-f1.8-macro",
+    "rf-24-f1.8-macro",
+    "ef-100-f2.8-l-macro"
+   ]
+  },
+  {
+   "id": "q24",
+   "split": "test",
+   "text": "travel zoom lens for R10",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "travel"
+    ],
+    "ownedCameraId": "eos-r10"
+   },
+   "expected": [
+    "rf-s-18-150",
+    "rf-24-240",
+    "rf-24-105-f4-7.1",
+    "rf-s-18-45",
+    "rf-24-105-f4-l"
+   ]
+  },
+  {
+   "id": "q25",
+   "split": "dev",
+   "text": "vlogging lens for R50 V",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "vlogging"
+    ],
+    "ownedCameraId": "eos-r50-v"
+   },
+   "expected": [
+    "rf-s-14-30-pz",
+    "rf-s-10-18",
+    "rf-16-f2.8",
+    "rf-15-30-f4.5",
+    "rf-10-20-f4-l"
+   ]
+  },
+  {
+   "id": "q26",
+   "split": "dev",
+   "text": "lens for shooting indoor basketball",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "indoor_sports",
+     "sports"
+    ]
+   },
+   "expected": [
+    "rf-70-200-f2.8-l",
+    "rf-70-200-f2.8-l-z",
+    "rf-135-f1.8-l",
+    "rf-100-300-f2.8-l",
+    "rf-24-70-f2.8-l"
+   ]
+  },
+  {
+   "id": "q27",
+   "split": "test",
+   "text": "wedding zoom lens under $2500",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "weddings"
+    ],
+    "budgetMax": 2500,
+    "mustHave": [
+     "zoom"
+    ]
+   },
+   "expected": [
+    "rf-24-70-f2.8-l",
+    "rf-28-70-f2.8",
+    "rf-24-105-f4-l",
+    "rf-70-200-f4-l",
+    "ef-70-200-f2.8-l-iii"
+   ]
+  },
+  {
+   "id": "q28",
+   "split": "dev",
+   "text": "portrait lens for my 5D Mark IV",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "portrait"
+    ],
+    "ownedCameraId": "eos-5d-mark-iv"
+   },
+   "expected": [
+    "ef-85-f1.4-l-is",
+    "ef-70-200-f2.8-l-iii",
+    "ef-50-f1.2-l",
+    "ef-100-f2.8-l-macro",
+    "ef-50-f1.8"
+   ]
+  },
+  {
+   "id": "q29",
+   "split": "dev",
+   "text": "landscape lens for my R7",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "landscape"
+    ],
+    "ownedCameraId": "eos-r7"
+   },
+   "expected": [
+    "rf-s-10-18",
+    "rf-10-20-f4-l",
+    "rf-14-35-f4-l",
+    "rf-15-35-f2.8-l",
+    "ef-s-10-22"
+   ]
+  },
+  {
+   "id": "q30",
+   "split": "test",
+   "text": "everyday zoom for R8 Mark II under $500",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "everyday"
+    ],
+    "ownedCameraId": "eos-r8-mark-ii",
+    "budgetMax": 500,
+    "mustHave": [
+     "zoom"
+    ]
+   },
+   "expected": [
+    "rf-24-105-f4-7.1",
+    "rf-24-50-f4.5",
+    "rf-s-14-30-pz",
+    "rf-s-18-45",
+    "rf-75-300"
+   ]
+  },
+  {
+   "id": "q31",
+   "split": "dev",
+   "text": "fast low light prime for video on the R6 V",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "video",
+     "low_light"
+    ],
+    "ownedCameraId": "eos-r6-v",
+    "mustHave": [
+     "prime"
+    ]
+   },
+   "expected": [
+    "rf-50-f1.4-l-vcm",
+    "rf-35-f1.4-l-vcm",
+    "rf-24-f1.4-l-vcm",
+    "rf-20-f1.4-l-vcm",
+    "rf-85-f1.4-l-vcm"
+   ]
+  },
+  {
+   "id": "q32",
+   "split": "dev",
+   "text": "stabilized zoom lens for video",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "video"
+    ],
+    "mustHave": [
+     "is",
+     "zoom"
+    ]
+   },
+   "expected": [
+    "rf-20-50-f4-l-pz",
+    "rf-24-105-f2.8-l-z",
+    "rf-24-105-f4-l",
+    "rf-24-70-f2.8-l",
+    "rf-28-70-f2.8"
+   ]
+  },
+  {
+   "id": "q33",
+   "split": "test",
+   "text": "camera for kids soccer games under $1500",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "sports"
+    ],
+    "budgetMax": 1500
+   },
+   "expected": [
+    "eos-r10",
+    "eos-r8",
+    "eos-r50",
+    "eos-r50-v",
+    "eos-rp"
+   ]
+  },
+  {
+   "id": "q34",
+   "split": "dev",
+   "text": "best mirrorless camera for wedding photographers",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "weddings"
+    ],
+    "bodyType": "mirrorless"
+   },
+   "expected": [
+    "eos-r6-mark-iii",
+    "eos-r5-mark-ii",
+    "eos-r6-mark-ii",
+    "eos-r5",
+    "eos-r3"
+   ]
+  },
+  {
+   "id": "q35",
+   "split": "test",
+   "text": "camera for filmmaking with internal RAW video",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "video"
+    ],
+    "mustHave": [
+     "raw_video"
+    ]
+   },
+   "expected": [
+    "eos-r5-c",
+    "eos-r6-v",
+    "eos-r5-mark-ii",
+    "eos-r6-mark-iii",
+    "eos-r1"
+   ]
+  },
+  {
+   "id": "q36",
+   "split": "test",
+   "text": "compact camera for vacation under $900",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "travel"
+    ],
+    "bodyType": "compact",
+    "budgetMax": 900
+   },
+   "expected": [
+    "powershot-g7x-mark-iii",
+    "powershot-sx740-hs",
+    "powershot-v10",
+    "powershot-v1",
+    "powershot-sx70-hs"
+   ]
+  },
+  {
+   "id": "q37",
+   "split": "dev",
+   "text": "full frame camera under 700 grams for travel",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "travel"
+    ],
+    "sensor": "full_frame",
+    "maxWeightG": 700
+   },
+   "expected": [
+    "eos-r8-mark-ii",
+    "eos-r8",
+    "eos-rp",
+    "eos-r6-v",
+    "eos-r6-mark-ii"
+   ]
+  },
+  {
+   "id": "q38",
+   "split": "dev",
+   "text": "APS-C camera for wildlife",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "wildlife"
+    ],
+    "sensor": "aps_c"
+   },
+   "expected": [
+    "eos-r7",
+    "eos-r10",
+    "eos-r50",
+    "eos-r50-v",
+    "eos-r100"
+   ]
+  },
+  {
+   "id": "q39",
+   "split": "test",
+   "text": "camera for portraits under $3000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "portrait"
+    ],
+    "budgetMax": 3000
+   },
+   "expected": [
+    "eos-r5",
+    "eos-r6-mark-iii",
+    "eos-r6-mark-ii",
+    "eos-r8-mark-ii",
+    "eos-r8"
+   ]
+  },
+  {
+   "id": "q40",
+   "split": "dev",
+   "text": "camera that shoots 4K 120fps for slow motion",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "video"
+    ],
+    "mustHave": [
+     "4k120"
+    ]
+   },
+   "expected": [
+    "eos-r6-mark-iii",
+    "eos-r6-v",
+    "eos-r5-mark-ii",
+    "eos-r5-c",
+    "eos-r5"
+   ]
+  },
+  {
+   "id": "q41",
+   "split": "test",
+   "text": "low light concert photography camera",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "low_light",
+     "events"
+    ]
+   },
+   "expected": [
+    "eos-r6-mark-iii",
+    "eos-r6-mark-ii",
+    "eos-r3",
+    "eos-r1",
+    "eos-r8-mark-ii"
+   ]
+  },
+  {
+   "id": "q42",
+   "split": "test",
+   "text": "upgrade from my Rebel T7, budget $2000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "everyday"
+    ],
+    "level": "intermediate",
+    "budgetMax": 2000
+   },
+   "expected": [
+    "eos-r6-mark-ii",
+    "eos-r8-mark-ii",
+    "eos-r7",
+    "eos-r8",
+    "eos-r10"
+   ]
+  },
+  {
+   "id": "q43",
+   "split": "dev",
+   "text": "camera for product and macro photography",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "macro"
+    ]
+   },
+   "expected": [
+    "eos-r5-mark-ii",
+    "eos-r5",
+    "eos-r7",
+    "eos-r6-mark-iii",
+    "eos-r8-mark-ii"
+   ]
+  },
+  {
+   "id": "q44",
+   "split": "test",
+   "text": "weather sealed camera for sports under $3000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "sports"
+    ],
+    "budgetMax": 3000,
+    "mustHave": [
+     "weather_sealed"
+    ]
+   },
+   "expected": [
+    "eos-r6-mark-iii",
+    "eos-r6-mark-ii",
+    "eos-r7",
+    "eos-r5",
+    "eos-r8-mark-ii"
+   ]
+  },
+  {
+   "id": "q45",
+   "split": "dev",
+   "text": "vlogging camera with a flip screen under $1000",
+   "parsed": {
+    "category": "camera",
+    "useCases": [
+     "vlogging"
+    ],
+    "budgetMax": 1000,
+    "mustHave": [
+     "vari_angle"
+    ]
+   },
+   "expected": [
+    "eos-r50-v",
+    "powershot-v1",
+    "eos-r50",
+    "powershot-g7x-mark-iii",
+    "powershot-sx70-hs"
+   ]
+  },
+  {
+   "id": "q46",
+   "split": "test",
+   "text": "portrait lens for R6 Mark III under $2000",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "portrait"
+    ],
+    "ownedCameraId": "eos-r6-mark-iii",
+    "budgetMax": 2000
+   },
+   "expected": [
+    "rf-85-f1.4-l-vcm",
+    "rf-85-f2-macro",
+    "rf-50-f1.4-l-vcm",
+    "rf-70-200-f4-l",
+    "rf-50-f1.8"
+   ]
+  },
+  {
+   "id": "q47",
+   "split": "dev",
+   "text": "cheap telephoto zoom for R50 under $800",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "wildlife",
+     "sports"
+    ],
+    "ownedCameraId": "eos-r50",
+    "budgetMax": 800,
+    "mustHave": [
+     "zoom"
+    ]
+   },
+   "expected": [
+    "rf-100-400",
+    "rf-s-55-210",
+    "rf-75-300",
+    "ef-s-55-250",
+    "ef-70-300-is-ii"
+   ]
+  },
+  {
+   "id": "q48",
+   "split": "test",
+   "text": "lens for real estate interiors on R5",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "architecture"
+    ],
+    "ownedCameraId": "eos-r5"
+   },
+   "expected": [
+    "rf-14-35-f4-l",
+    "rf-10-20-f4-l",
+    "ts-e-17-f4-l",
+    "ts-e-24-f3.5-l-ii",
+    "rf-15-35-f2.8-l"
+   ]
+  },
+  {
+   "id": "q49",
+   "split": "dev",
+   "text": "tilt shift lens",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "architecture"
+    ]
+   },
+   "expected": [
+    "ts-e-24-f3.5-l-ii",
+    "ts-e-17-f4-l",
+    "ts-e-50-f2.8-l-macro",
+    "ts-e-90-f2.8-l-macro",
+    "ts-e-135-f4-l-macro"
+   ]
+  },
+  {
+   "id": "q50",
+   "split": "test",
+   "text": "first prime lens for my R10 under $500",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "everyday"
+    ],
+    "ownedCameraId": "eos-r10",
+    "budgetMax": 500,
+    "mustHave": [
+     "prime"
+    ]
+   },
+   "expected": [
+    "rf-28-f2.8",
+    "rf-50-f1.8",
+    "rf-16-f2.8",
+    "rf-45-f1.2",
+    "ef-s-24-f2.8"
+   ]
+  },
+  {
+   "id": "q51",
+   "split": "dev",
+   "text": "stadium football lens for my R3",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "sports"
+    ],
+    "ownedCameraId": "eos-r3"
+   },
+   "expected": [
+    "rf-400-f2.8-l",
+    "rf-100-300-f2.8-l",
+    "rf-600-f4-l",
+    "rf-100-500-l",
+    "rf-70-200-f2.8-l"
+   ]
+  },
+  {
+   "id": "q52",
+   "split": "test",
+   "text": "lightweight hiking lens for R8 under 500g",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "travel",
+     "landscape"
+    ],
+    "ownedCameraId": "eos-r8",
+    "maxWeightG": 500
+   },
+   "expected": [
+    "rf-24-105-f4-7.1",
+    "rf-15-30-f4.5",
+    "rf-28-70-f2.8",
+    "rf-24-50-f4.5",
+    "rf-16-f2.8"
+   ]
+  },
+  {
+   "id": "q53",
+   "split": "dev",
+   "text": "wide prime for astrophotography under $1000",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "astro"
+    ],
+    "budgetMax": 1000,
+    "mustHave": [
+     "prime"
+    ]
+   },
+   "expected": [
+    "rf-24-f1.8-macro",
+    "rf-16-f2.8",
+    "rf-35-f1.8-macro",
+    "rf-28-f2.8",
+    "rf-50-f1.8"
+   ]
+  },
+  {
+   "id": "q54",
+   "split": "test",
+   "text": "macro lens under $1500",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "macro"
+    ],
+    "budgetMax": 1500,
+    "mustHave": [
+     "macro"
+    ]
+   },
+   "expected": [
+    "rf-100-f2.8-l-macro",
+    "rf-85-f2-macro",
+    "ef-100-f2.8-l-macro",
+    "rf-35-f1.8-macro",
+    "rf-24-f1.8-macro"
+   ]
+  },
+  {
+   "id": "q55",
+   "split": "dev",
+   "text": "fast standard zoom for event photography",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "events"
+    ],
+    "mustHave": [
+     "zoom"
+    ]
+   },
+   "expected": [
+    "rf-24-70-f2.8-l",
+    "rf-28-70-f2-l",
+    "rf-24-105-f2.8-l-z",
+    "rf-28-70-f2.8",
+    "ef-24-70-f2.8-l-ii"
+   ]
+  },
+  {
+   "id": "q56",
+   "split": "test",
+   "text": "budget video lens for R50 V under $500",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "video",
+     "vlogging"
+    ],
+    "ownedCameraId": "eos-r50-v",
+    "budgetMax": 500
+   },
+   "expected": [
+    "rf-s-14-30-pz",
+    "rf-s-10-18",
+    "rf-s-18-45",
+    "rf-16-f2.8",
+    "rf-50-f1.8"
+   ]
+  },
+  {
+   "id": "q57",
+   "split": "test",
+   "text": "wildlife lens for my 5D Mark IV",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "wildlife"
+    ],
+    "ownedCameraId": "eos-5d-mark-iv"
+   },
+   "expected": [
+    "ef-100-400-l-ii",
+    "ef-600-f4-l-iii",
+    "ef-400-f2.8-l-iii",
+    "ef-70-300-is-ii",
+    "ef-75-300-iii"
+   ]
+  },
+  {
+   "id": "q58",
+   "split": "test",
+   "text": "wide angle lens for Rebel T7",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "landscape"
+    ],
+    "ownedCameraId": "eos-rebel-t7"
+   },
+   "expected": [
+    "ef-s-10-18",
+    "ef-s-10-22",
+    "ef-11-24-f4-l",
+    "ef-16-35-f4-l",
+    "ef-16-35-f2.8-l-iii"
+   ]
+  },
+  {
+   "id": "q59",
+   "split": "dev",
+   "text": "street photography prime for R8",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "street"
+    ],
+    "ownedCameraId": "eos-r8",
+    "mustHave": [
+     "prime"
+    ]
+   },
+   "expected": [
+    "rf-35-f1.8-macro",
+    "rf-28-f2.8",
+    "rf-35-f1.4-l-vcm",
+    "rf-50-f1.8",
+    "rf-24-f1.8-macro"
+   ]
+  },
+  {
+   "id": "q60",
+   "split": "test",
+   "text": "telephoto zoom for wildlife under $2000 on R6 Mark II",
+   "parsed": {
+    "category": "lens",
+    "useCases": [
+     "wildlife"
+    ],
+    "ownedCameraId": "eos-r6-mark-ii",
+    "budgetMax": 2000,
+    "mustHave": [
+     "zoom"
+    ]
+   },
+   "expected": [
+    "rf-100-400",
+    "rf-70-200-f4-l",
+    "ef-70-300-is-ii",
+    "rf-75-300",
+    "ef-75-300-iii"
+   ]
+  }
+ ]
+}
