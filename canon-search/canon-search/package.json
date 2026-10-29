@@ -13,7 +13,9 @@
     "eval:verbose": "node --experimental-strip-types --no-warnings eval/run-eval.ts --verbose",
     "scrape": "python3 scripts/scrape_listing.py",
     "reconcile": "python3 scripts/reconcile.py",
-    "refresh": "python3 scripts/scrape_listing.py && python3 scripts/reconcile.py && python3 scripts/build_catalog.py && npm run -s build:compat && npm run -s eval"
+    "refresh": "python3 scripts/scrape_listing.py && python3 scripts/reconcile.py && python3 scripts/build_catalog.py && npm run -s build:compat && npm run -s eval",
+    "eval:parse": "node --experimental-strip-types --no-warnings eval/run-parse-eval.ts",
+    "eval:sets": "node --experimental-strip-types --no-warnings eval/check-bundles.ts"
   },
   "engines": {
     "node": ">=22.6"

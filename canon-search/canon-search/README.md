@@ -12,10 +12,14 @@ Independent concept project, not affiliated with Canon.
 | `data/compatibility.json` | All 1,541 camera x lens pairs, plus `lensesByCamera` / `camerasByLens` indexes |
 | `src/compatibility.ts` | Mount rules (the single source of truth for the matrix) |
 | `src/ranking.ts` | Deterministic ranker: hard filters, use-case fit scores, query-aware reasons |
-| `app/` | React app (Vite). Placeholder only; imports the catalog and `src/ranking.ts` directly |
+| `app/` | React homepage (Vite): prompt box, results, categories, featured, lens finder, deals. `?q=` opens a search directly |
+| `src/parse.ts` | Keyword parser, free text to `ParsedQuery`. Stand-in for the LLM step, same output shape. "a travel camera" parses as a camera + lens set (`bundle`), "camera body" as body only, "lens for my R8" as lens |
+| `src/bundles.ts` | Camera + lens sets: every body x usable lens plus real kits at kit price; budget and weight apply to the set total; one set per body |
 | `src/types.ts` | `ParsedQuery`, the shape the LLM must output |
 | `eval/queries.json` | 32 queries with hand-labeled expected top 5, split dev/test |
 | `eval/run-eval.ts` | recall@5, nDCG@5, hit@1, ranking latency |
+| `eval/run-parse-eval.ts` | Parser field accuracy vs the hand parses, and recall@5 from text (`npm run eval:parse`) |
+| `eval/check-bundles.ts` | Rule checks for sets (fit, budget, weight, distinct bodies) and sample output (`npm run eval:sets`) |
 | `scripts/scrape_listing.py` | Pulls every product on all four camera/lens listings (all pages) into `data/scraped.json` |
 | `scripts/reconcile.py` | Updates catalog prices from the scrape and prints a gap report |
 

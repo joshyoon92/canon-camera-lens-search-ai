@@ -154,36 +154,63 @@ function lensPasses(l: any, q: ParsedQuery): boolean {
 const DEFAULT_BODY = { id: "_default_rf_ff", mount: "RF", sensor: "full_frame" };
 
 // ---------------- public API ----------------
-export function rank(q: ParsedQuery, cameras: any[], lenses: any[], k = 5): RankedResult[] {
-  const uses = q.useCases.length ? q.useCases : (["everyday"] as UseCase[]);
-  const avg = (fns: ((x: any) => number)[], f: any) => fns.reduce((s, fn) => s + fn(f), 0) / fns.length;
+const usesOf = (q: ParsedQuery) => q.useCases.length ? q.useCases : (["everyday"] as UseCase[]);
+const avg = (fns: ((x: any) => number)[], f: any) => fns.reduce((s, fn) => s + fn(f), 0) / fns.length;
 
+// Fit of one body for the query. Hard filters are the caller's job.
+export function scoreCamera(c: any, q: ParsedQuery): number {
+  const uses = usesOf(q);
+  const f = camFeatures(c);
+  let score = avg(uses.map(u => CAMERA_FIT[u]), f);
+  const tagHits = uses.filter(u => c.useTags.includes(u)).length;
+  score += 0.12 * Math.min(tagHits, 2) / 2;                        // curated tags as a tie-breaker
+  if (q.budgetMax) score += 0.1 * clamp(c.priceUSD / q.budgetMax); // spend the budget on capability
+  if (q.level === "beginner" && (c.level === "pro" || c.level === "advanced")) score -= 0.3;
+  if (q.level === "pro") score += 0.15 * f.proLevel;
+  return score;
+}
+
+// Fit of one lens on a given body, or null if it can't be used there.
+export function scoreLens(l: any, body: any, q: ParsedQuery): { score: number; compat: any } | null {
+  const uses = usesOf(q);
+  const compat = compatibility(body, l);
+  if (!compat.usable) return null;
+  const [effMin, effMax] = compat.effectiveFocalMm!;
+  const f = lensFeatures(l, effMin, effMax);
+  let score = avg(uses.map(u => LENS_FIT[u]), f);
+  const tagHits = uses.filter(u => l.useTags.includes(u)).length;
+  score += 0.12 * Math.min(tagHits, 2) / 2;
+  score -= COMPAT_PENALTY[compat.status] ?? 0;
+  if (q.budgetMax) score += 0.05 * clamp(l.priceUSD / q.budgetMax);
+  return { score, compat };
+}
+
+// Fit of a compact's built-in lens, scored as if it were a lens on that body.
+export function scoreFixedLens(c: any, q: ParsedQuery): number {
+  const [effMin, effMax] = c.fixedLens.focalEquivMm;
+  const [apWide, apTele] = c.fixedLens.aperture;
+  const builtIn = {
+    type: effMin === effMax ? "prime" : "zoom", maxApertureWide: apWide, maxApertureTele: apTele,
+    weightG: 0, priceUSD: 0, imageStabilization: true, series: "standard", macro: false, useTags: [],
+  };
+  const f = lensFeatures(builtIn, effMin, effMax);
+  return avg(usesOf(q).map(u => LENS_FIT[u]), f);
+}
+
+export { cameraPasses, lensPasses, cameraReasons, lensReasons };
+
+export function rank(q: ParsedQuery, cameras: any[], lenses: any[], k = 5): RankedResult[] {
   if (q.category === "camera") {
-    return cameras.filter(c => cameraPasses(c, q)).map(c => {
-      const f = camFeatures(c);
-      let score = avg(uses.map(u => CAMERA_FIT[u]), f);
-      const tagHits = uses.filter(u => c.useTags.includes(u)).length;
-      score += 0.12 * Math.min(tagHits, 2) / 2;                        // curated tags as a tie-breaker
-      if (q.budgetMax) score += 0.1 * clamp(c.priceUSD / q.budgetMax); // spend the budget on capability
-      if (q.level === "beginner" && (c.level === "pro" || c.level === "advanced")) score -= 0.3;
-      if (q.level === "pro") score += 0.15 * f.proLevel;
-      return { item: c, score, reasons: cameraReasons(c, uses) };
-    }).sort((a, b) => b.score - a.score).slice(0, k).map(toResult);
+    return cameras.filter(c => cameraPasses(c, q))
+      .map(c => ({ item: c, score: scoreCamera(c, q), reasons: cameraReasons(c, usesOf(q)) }))
+      .sort((a, b) => b.score - a.score).slice(0, k).map(toResult);
   }
 
   const owned = q.ownedCameraId ? cameras.find(c => c.id === q.ownedCameraId) : DEFAULT_BODY;
   if (!owned) throw new Error(`Unknown camera: ${q.ownedCameraId}`);
   return lenses.filter(l => lensPasses(l, q)).flatMap(l => {
-    const compat = compatibility(owned, l);
-    if (!compat.usable) return [];
-    const [effMin, effMax] = compat.effectiveFocalMm!;
-    const f = lensFeatures(l, effMin, effMax);
-    let score = avg(uses.map(u => LENS_FIT[u]), f);
-    const tagHits = uses.filter(u => l.useTags.includes(u)).length;
-    score += 0.12 * Math.min(tagHits, 2) / 2;
-    score -= COMPAT_PENALTY[compat.status] ?? 0;
-    if (q.budgetMax) score += 0.05 * clamp(l.priceUSD / q.budgetMax);
-    return [{ item: l, score, reasons: lensReasons(l, compat), compat }];
+    const s = scoreLens(l, owned, q);
+    return s ? [{ item: l, score: s.score, reasons: lensReasons(l, s.compat), compat: s.compat }] : [];
   }).sort((a, b) => b.score - a.score).slice(0, k).map(toResult);
 }
 

@@ -12,7 +12,8 @@ export type MustHave =
   | "is" | "macro" | "power_zoom" | "prime" | "zoom";
 
 export interface ParsedQuery {
-  category: "camera" | "lens";
+  // "bundle" = camera + lens sets ("a travel camera"); "camera" = body only ("travel camera body").
+  category: "camera" | "lens" | "bundle";
   useCases: UseCase[];
   budgetMax?: number;
   ownedCameraId?: string;            // lens queries: "for my R8"
@@ -30,4 +31,17 @@ export interface RankedResult {
   priceUSD: number | null;
   reasons: string[];       // grounded in catalog fields; safe to show or pass to the LLM
   compatibility?: { status: string; note: string; effectiveFocalMm: [number, number] | null };
+}
+
+// One camera + lens set. Compacts have no separate lens (builtInLens describes theirs).
+export interface RankedBundle {
+  id: string;
+  score: number;
+  camera: RankedResult;
+  lenses: RankedResult[];
+  builtInLens?: string;
+  kit?: { id: string; name: string; priceUSD: number; url: string | null };
+  totalUSD: number;          // what the set costs (kit price when it is a kit)
+  separateUSD: number;       // body + lenses bought one by one
+  totalWeightG: number | null;
 }
