@@ -13,6 +13,8 @@ Independent concept project, not affiliated with Canon.
 | `src/compatibility.ts` | Mount rules (the single source of truth for the matrix) |
 | `src/ranking.ts` | Deterministic ranker: hard filters, use-case fit scores, query-aware reasons |
 | `app/` | React homepage (Vite): prompt box, results, categories, featured, lens finder, deals. `?q=` opens a search directly |
+| `api/search.ts` | Vercel Function: `GET /api/search?q=...&as=camera|bundle` (or POST `{ q, as }`). The page calls this; `npm run dev` serves it through Vite |
+| `server/search.ts` | Search handler behind the API: validation, parse, rank or build sets. The LLM parser goes here so its key stays server-side |
 | `src/parse.ts` | Keyword parser, free text to `ParsedQuery`. Stand-in for the LLM step, same output shape. "a travel camera" parses as a camera + lens set (`bundle`), "camera body" as body only, "lens for my R8" as lens |
 | `src/bundles.ts` | Camera + lens sets: every body x usable lens plus real kits at kit price; budget and weight apply to the set total; one set per body |
 | `src/types.ts` | `ParsedQuery`, the shape the LLM must output |
@@ -27,6 +29,12 @@ Setup: `npm install` (Node 22.6+).
 
 - App: `npm run dev` (Vite dev server), `npm run build`, `npm run typecheck`
 - Engine: `npm run build:compat` then `npm run eval` (these run through Node type stripping and need no build)
+
+## Deploy (Vercel)
+
+One-time setup at vercel.com: **Add New → Project → Import** `joshyoon92/canon-camera-lens-search-ai`, set **Root Directory** to `canon-search/canon-search`, and deploy. `vercel.json` sets the Vite build, the `dist` output and headers; `api/search.ts` becomes a serverless function automatically. After that, every push to `main` deploys to production and every other branch gets a preview URL.
+
+`vercel.json` sends `X-Robots-Tag: noindex` so the concept stays out of search engines while it uses Canon product names.
 
 Full refresh from the live site: `pip install requests beautifulsoup4 && npm run refresh`. The reconcile step lists every product on the site that has no specs yet; adding those to `scripts/build_catalog.py` is the remaining manual work. Kits need no compatibility rows of their own; they inherit their body's.
 

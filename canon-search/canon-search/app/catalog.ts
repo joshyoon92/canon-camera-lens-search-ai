@@ -1,14 +1,8 @@
-// Catalog data and the search pipeline the page uses: text -> ParsedQuery -> ranked results.
+// Catalog data for browsing sections, plus the client for the search API.
 import cameraData from "../data/cameras.json";
 import lensData from "../data/lenses.json";
-import { parseQuery } from "../src/parse.ts";
-import { rank } from "../src/ranking.ts";
 import { compatibility } from "../src/compatibility.ts";
-import { rankBundles } from "../src/bundles.ts";
-import kitData from "../data/kits.json";
-import type { ParsedQuery, RankedBundle, RankedResult } from "../src/types.ts";
-
-const kits = kitData.kits;
+import type { SearchResponse } from "../server/search.ts";
 
 export interface Product {
   id: string;
@@ -39,20 +33,16 @@ export const compatibleLensCount = (cameraId: string) => {
   return body ? lenses.filter(l => !l.kitLensOnly && compatibility(body, l).usable).length : 0;
 };
 
-export interface SearchResponse {
-  text: string;
-  query: ParsedQuery;
-  results: RankedResult[];        // camera or lens queries
-  bundles: RankedBundle[];        // camera + lens set queries
-}
+export type { SearchResponse };
 
+// Search runs on the backend (api/search.ts on Vercel, the Vite dev server locally).
 // `as` lets the page switch a camera request between sets and body only.
-export function search(text: string, as?: "camera" | "bundle"): SearchResponse {
-  const parsed = parseQuery(text, cameras).query;
-  const query = as && parsed.category !== "lens" ? { ...parsed, category: as } : parsed;
-  return query.category === "bundle"
-    ? { text, query, results: [], bundles: rankBundles(query, cameras, lenses, kits, 5) }
-    : { text, query, results: rank(query, cameras, lenses, 5), bundles: [] };
+export async function search(text: string, as?: "camera" | "bundle", signal?: AbortSignal): Promise<SearchResponse> {
+  const params = new URLSearchParams({ q: text, ...(as && { as }) });
+  const res = await fetch(`/api/search?${params}`, { signal });
+  const body = await res.json().catch(() => null);
+  if (!res.ok) throw new Error(body?.error ?? `Search failed (${res.status})`);
+  return body as SearchResponse;
 }
 
 export const isOnSale = (p: Product) => p.regularPriceUSD != null && p.regularPriceUSD > p.priceUSD;

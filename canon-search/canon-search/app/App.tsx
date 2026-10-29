@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { search, type SearchResponse } from "./catalog.ts";
 import { Header } from "./components/Header.tsx";
 import { AskPanel } from "./components/AskPanel.tsx";
@@ -10,13 +10,13 @@ import { LensFinder } from "./components/LensFinder.tsx";
 import { Footer } from "./components/Footer.tsx";
 
 export function App() {
-  // ?q= makes searches shareable and lets a link open straight onto results.
-  const [response, setResponse] = useState<SearchResponse | null>(() => {
-    const q = new URLSearchParams(window.location.search).get("q");
-    return q ? search(q) : null;
-  });
+  const [response, setResponse] = useState<SearchResponse | null>(null);
+  const [pending, setPending] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const inFlight = useRef<AbortController | null>(null);
+  const lastRequest = useRef<[string, ("camera" | "bundle")?] | null>(null);
 
   const setUrlQuery = (text: string | null) => {
     const url = new URL(window.location.href);
@@ -24,16 +24,43 @@ export function App() {
     window.history.replaceState(null, "", url);
   };
 
+  // Only the latest request may update the page; older ones are aborted.
+  const run = async (text: string, as?: "camera" | "bundle", scroll = true) => {
+    inFlight.current?.abort();
+    const controller = new AbortController();
+    inFlight.current = controller;
+    lastRequest.current = [text, as];
+    setPending(text);
+    setError(null);
+    if (scroll) requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    try {
+      setResponse(await search(text, as, controller.signal));
+    } catch (e) {
+      if (!controller.signal.aborted) setError(e instanceof Error ? e.message : "Search failed");
+    } finally {
+      if (inFlight.current === controller) setPending(null);
+    }
+  };
+
   const ask = (text: string) => {
-    setResponse(search(text));
     setUrlQuery(text);
-    requestAnimationFrame(() => resultsRef.current?.scrollIntoView({ behavior: "smooth", block: "start" }));
+    run(text);
   };
 
   const clear = () => {
+    inFlight.current?.abort();
     setResponse(null);
+    setError(null);
+    setPending(null);
     setUrlQuery(null);
   };
+
+  // ?q= makes searches shareable and lets a link open straight onto results.
+  useEffect(() => {
+    const q = new URLSearchParams(window.location.search).get("q");
+    if (q) run(q, undefined, false);
+    return () => inFlight.current?.abort();
+  }, []);
 
   const focusAsk = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -58,12 +85,25 @@ export function App() {
         </section>
 
         <div ref={resultsRef} className="results-anchor">
-          {response && (
-            <Results
-              response={response}
-              onClear={clear}
-              onSwitch={as => setResponse(search(response.text, as))}
-            />
+          {error && (
+            <div className="results">
+              <div className="results__empty" role="alert">
+                <p>Search isn't available right now: {error}</p>
+                <p><button className="link-btn" onClick={() => lastRequest.current && run(...lastRequest.current, false)}>Try again</button></p>
+              </div>
+            </div>
+          )}
+          {pending && !response && !error && (
+            <div className="results"><p className="results__loading" role="status">Finding gear for “{pending}”…</p></div>
+          )}
+          {response && !error && (
+            <div className={pending ? "results--stale" : undefined} aria-busy={pending != null}>
+              <Results
+                response={response}
+                onClear={clear}
+                onSwitch={as => run(response.text, as, false)}
+              />
+            </div>
           )}
         </div>
 
